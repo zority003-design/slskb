@@ -73,6 +73,49 @@ button:focus-visible,input:focus-visible{outline-color:#8dd7ff}
 #homeScreen .visual{isolation:isolate}
 @media(prefers-reduced-motion:reduce){body:before,.rain,.intro-rain{animation:none}}
 
+
+/* === FULL MIDNIGHT-BLUE REWORK: remove leftover green art direction === */
+:root{--bg:#050d1b!important;--surface:#0a1729!important;--surface2:#0e2036!important;--surface3:#15304b!important;--line:#294766!important;--text:#edf6ff!important;--muted:#91abc7!important;--mint:#8bd6ff!important;--gold:#f2c981!important;--red:#ff8d9c!important;--blue:#8bd6ff!important}
+body{color:#edf6ff!important;background:#050d1b!important;background-image:radial-gradient(ellipse at 18% 10%,#1b4c783e 0,transparent 42%),radial-gradient(ellipse at 82% 78%,#123d6a45 0,transparent 42%),linear-gradient(135deg,#040914,#08182b 48%,#050d1b)!important;background-attachment:fixed!important}
+body:before{content:"";position:fixed;z-index:-1;inset:-30%;pointer-events:none;opacity:.85;background:linear-gradient(115deg,transparent 20%,#2475aa16 38%,transparent 52%),linear-gradient(25deg,transparent 30%,#4ba6d014 48%,transparent 65%),repeating-linear-gradient(90deg,#5e9cc00a 0 1px,transparent 1px 64px);background-size:180% 180%,160% 160%,64px 64px;animation:blueAtmosphere 11s ease-in-out infinite alternate!important}
+@keyframes blueAtmosphere{0%{transform:translate3d(-2%,1%,0);background-position:0% 0%,100% 0%,0 0}100%{transform:translate3d(2%,-2%,0);background-position:100% 100%,0% 100%,32px 32px}}
+.topbar,.footer{border-color:#294766!important}.logo{background:#102844!important;border-color:#3e6e99!important;color:#a9e4ff!important}.led{background:#8bd6ff!important;box-shadow:0 0 13px #8bd6ff!important}
+.eyebrow,.chapter-kicker,.home-side .chapter-kicker{color:#8bd6ff!important}
+.hero h1,.home-side h2,.play-title,.intro-copy h1{color:#edf6ff!important}
+.visual{border-color:#2a4b6c!important;background:linear-gradient(145deg,#0b1e32,#12304a 60%,#071321)!important;box-shadow:0 20px 65px #0006,inset 0 0 40px #3b8cc010!important}
+.city-window{border-color:#284865!important;background:linear-gradient(180deg,#08182a,#123655)!important;box-shadow:inset 0 0 60px #8bd6ff14!important}
+.city-window:before,.city-window:after{background:#2b5275!important}.cityline{background:#07111f!important}.desk{background:linear-gradient(#294b69,#091625)!important}.op-body{background:#234666!important;border-color:#426c90!important}.op-neck{background:#c48c79!important}.op-head{background:#d9a18c!important}.op-hair{background:#17283c!important}.lamp{background:#345a7d!important}.lamp:before{background:#bceaff!important;box-shadow:0 15px 55px #55b8ff66!important}
+.home-side,.panel,.feature,.story-card,.sidebar-card,.ending-banner{background-color:#0a182a!important;border-color:#294766!important}.home-side{background:linear-gradient(145deg,#10243b,#091625)!important}.feature{background:linear-gradient(145deg,#10243b,#0a1728)!important}
+.primary{background:#a8e3ff!important;color:#061323!important;border-color:#a8e3ff!important;box-shadow:4px 4px 0 #315b7d!important}.primary:hover{background:#d7f3ff!important}.secondary,.nav-btn,.icon-btn{border-color:#294766!important;color:#c5d9ed!important;background:#0b1b2e!important}.secondary:hover,.nav-btn:hover{border-color:#8bd6ff!important;color:#fff!important}
+.choice{background:#0a1a2c!important;border-color:#294766!important;color:#edf6ff!important}.choice:hover{background:#122c45!important;border-color:#8bd6ff!important}.choice-num{color:#8bd6ff!important}.metric-bar,.time-bar{background:#1b3550!important}.metric-bar span,.time-bar span{background:#8bd6ff!important}
+.intro-frame{max-width:none!important;min-height:calc(100vh - 130px)!important;border:0!important;background:#06101e!important;box-shadow:none!important}.intro-top,.intro-bottom{border-color:#294766!important;color:#8eaac5!important}.intro-bottom{color:#8bd6ff!important}.intro-copy{background:linear-gradient(145deg,#0b1d31,#071321)!important}.intro-art{border-color:#294766!important;background:linear-gradient(180deg,#06101d,#102c46 70%,#071321)!important}.intro-skyline{background:#07111f!important}.intro-terminal{border-color:#3b6287!important;background:#061321f2!important;color:#d8eaff!important}.intro-terminal span,.intro-terminal i{color:#8bd6ff!important}.intro-terminal b{color:#f2c981!important}.intro-scan{background:#8bd6ff66!important;box-shadow:0 0 15px #8bd6ff!important}
+.day-transition-screen{position:relative!important;min-height:calc(100vh - 105px)!important;display:none;overflow:hidden!important;padding:clamp(18px,4vw,52px)!important;box-sizing:border-box!important;background:radial-gradient(ellipse at 50% 42%,#12385a 0,transparent 42%),linear-gradient(120deg,#050c18,#0a1d33 52%,#050c18)!important}
+.day-transition-screen.active{display:flex!important;align-items:stretch!important;justify-content:stretch!important}
+.day-transition-screen:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#9edfff08 0 1px,transparent 1px 5px),linear-gradient(90deg,transparent 49.9%,#7ecfff0c 50%,transparent 50.1%);animation:scanDrift 5s linear infinite}
+@keyframes scanDrift{from{background-position:0 0,0 0}to{background-position:0 80px,0 0}}
+.day-transition-frame{position:relative!important;display:flex!important;flex-direction:column!important;width:100%!important;max-width:none!important;min-height:calc(100vh - 210px)!important;margin:auto!important;border:0!important;border-top:1px solid #3b6387!important;border-bottom:1px solid #3b6387!important;background:linear-gradient(105deg,#081626aa,#0b2037a8 52%,#071322aa)!important;box-shadow:0 0 90px #2d8bc01a!important}
+.day-transition-top{border-bottom:1px solid #294766!important;color:#8daac7!important;padding:18px 24px!important}
+.day-transition-main{min-height:58vh!important;padding:clamp(30px,7vh,85px) 20px!important}
+.day-transition-number{display:flex!important;align-items:baseline!important;gap:18px!important}
+.day-transition-number span{color:#8bd6ff!important;letter-spacing:.3em!important}
+.day-transition-number strong{font-size:clamp(112px,24vw,260px)!important;line-height:.78!important;color:#e7f5ff!important;letter-spacing:-.09em!important;text-shadow:0 0 70px #4cbaff2b!important}
+.day-transition-kicker{color:#8bd6ff!important;letter-spacing:.3em!important}
+.day-transition-rule{width:min(380px,65vw)!important;height:2px!important;background:linear-gradient(90deg,transparent,#8bd6ff,#8bd6ff00)!important}
+.day-transition-main h1{font-size:clamp(30px,5vw,58px)!important;color:#f0f7ff!important;letter-spacing:-.04em!important;margin:25px 0 10px!important}
+.day-transition-main p{max-width:570px!important;color:#a7bed7!important;line-height:1.8!important}
+.day-transition-brief{border:1px solid #2c4e70!important;background:#09192bd9!important;color:#b8d7f0!important;padding:12px 18px!important}
+.brief-led,.pixel-signal i{background:#8bd6ff!important;box-shadow:0 0 13px #8bd6ff55!important}
+.day-transition-foot{border-top:1px solid #294766!important;color:#7794b3!important;padding:18px 24px!important}
+.day-transition-button{display:none!important}
+.fade-cut{z-index:99999!important;background:#020712!important}
+.scene-art{background:linear-gradient(180deg,#071727,#12314b 62%,#06101c)!important}.scene-art .city-window{border-color:#294766!important}
+/* Crisp tiny drops falling vertically, animated quickly enough to read as rain. */
+.rain,.intro-rain{position:absolute!important;inset:0!important;overflow:hidden!important;pointer-events:none!important;opacity:.9!important;background-image:radial-gradient(ellipse 1px 2.5px at 12px 18px,#c6edffdd 96%,transparent 100%),radial-gradient(ellipse 1px 2px at 43px 72px,#8bd6ffcc 96%,transparent 100%),radial-gradient(ellipse 1px 3px at 91px 41px,#d8f4ffbb 96%,transparent 100%),radial-gradient(ellipse 1px 2px at 137px 95px,#8bd6ffcc 96%,transparent 100%)!important;background-size:160px 110px!important;background-repeat:repeat!important;animation:pixelRainDrops .38s linear infinite!important}
+.intro-rain{animation-duration:.44s!important;opacity:.75!important}
+@keyframes pixelRainDrops{from{background-position:0 -110px,0 -60px,0 -85px,0 -25px}to{background-position:0 0,0 50px,0 25px,0 85px}}
+@media(max-width:650px){.day-transition-screen{padding:10px!important;min-height:calc(100vh - 80px)!important}.day-transition-frame{min-height:calc(100vh - 100px)!important}.day-transition-main{min-height:65vh!important}.day-transition-top,.day-transition-foot{padding:13px 10px!important;font-size:8px!important}.day-transition-number strong{font-size:clamp(100px,32vw,180px)!important}.day-transition-foot span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){body:before,.day-transition-screen:before,.rain,.intro-rain{animation:none!important}}
+
 </style>
 <style id="mobile-weather-audio-pass">
 /* Immersive mobile and weather pass */
@@ -454,7 +497,25 @@ const caseNames={case1:'Тишина за дверью',case2:'Десять ми
 function randomCase(exclude){const ids=Object.keys(caseStarts).filter(id=>id!==exclude);return ids[Math.floor(Math.random()*ids.length)]||'case1'}
 function caseForDay(day,exclude){let pool;if(day<=1)pool=['case1'];else if(day===2)pool=['case2','case3'];else if(day<=4)pool=['case4','case5'];else pool=['case2','case3','case4','case5'];let choices=pool.filter(id=>id!==exclude);if(!choices.length)choices=pool;return choices[Math.floor(Math.random()*choices.length)]||'case1'}
 function startGame(){state=baseState();state.careerStarted=true;state.day=1;state.caseId=randomCase();state.scene=caseStarts[state.caseId];state.startedAt=Date.now();stopDecisionTimer();save();showScreen('intro')}
-function cinematicTransition(screen){const cut=$('fadeCut');if(!cut){showScreen(screen);return}cut.classList.add('on');setTimeout(()=>{showScreen(screen);setTimeout(()=>cut.classList.remove('on'),160)},420);}
+function cinematicTransition(screen){
+ const cut=$('fadeCut');
+ if(!cut){showScreen(screen);return}
+ cut.classList.add('on');
+ window.setTimeout(()=>{
+   try{
+     showScreen(screen);
+   }catch(err){
+     console.error('Ошибка перехода на экран '+screen,err);
+     const game=$('gameScreen');
+     if(screen==='game'&&game){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));game.classList.add('active');$('topStatus').textContent='РАБОЧИЙ ДЕНЬ · ВЫЗОВ В РАБОТЕ';}
+   }finally{
+     cut.classList.remove('on');
+     cut.style.opacity='0';
+     cut.style.visibility='hidden';
+     window.setTimeout(()=>{cut.style.visibility='';cut.style.opacity='';},450);
+   }
+ },360);
+}
 function renderDayTransition(){const day=state.day||1;$('dayTransitionNumber').textContent=String(day).padStart(2,'0');$('dayTransitionKicker').textContent=day===1?'ПЕРВАЯ СМЕНА':'НОВОЕ ДЕЖУРСТВО';$('dayTransitionTitle').textContent=day===1?'Первая ночь.':'Ночь '+String(day).padStart(2,'0')+'.';$('dayTransitionText').textContent=day===1?'Линия открыта. Первый вызов уже поступил.':'Предыдущий день остался в журнале. Новая смена начинается с чистого листа — но последствия решений остаются.';$('dayTransitionCase').textContent='ДЕЛО · '+(caseNames[state.caseId]||'ВХОДЯЩИЙ ВЫЗОВ').toUpperCase();$('dayTransitionClock').textContent=day===1?'01:00 AM':'01:'+String((day*7)%60).padStart(2,'0')+' AM'}
 function beginFirstDay(){stopDecisionTimer();state.day=1;state.daysSurvived=0;state.dayHistory=[];state.clues=[];state.visited=[];state.caseId='case1';state.scene=caseStarts.case1;state.finished=false;state.ending=null;state.elapsed=0;state.history=[];state.startedAt=Date.now();state.careerStarted=true;save();renderDayTransition();cinematicTransition('dayStart');setTimeout(()=>{if($('dayStartScreen').classList.contains('active'))startDuty()},1900)}
 function startDuty(){stopDecisionTimer();if(!sceneData[state.scene]){state.caseId=state.caseId||'case1';state.scene=caseStarts[state.caseId]||'start'}state.finished=false;state.ending=null;save();cinematicTransition('game')}
