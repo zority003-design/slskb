@@ -15,9 +15,12 @@ fs.mkdirSync(output, { recursive: true });
 
 for (const file of ["index.html", "_headers", "_redirects"]) {
   const source = path.join(root, file);
-  if (fs.existsSync(source)) {
-    fs.copyFileSync(source, path.join(output, file));
-  }
+  if (fs.existsSync(source)) fs.copyFileSync(source, path.join(output, file));
 }
 
-console.log("Static game copied to dist/ for Cloudflare Pages.");
+const assets = path.join(root, "assets");
+if (fs.existsSync(assets)) {
+  fs.cpSync(assets, path.join(output, "assets"), { recursive: true });
+}
+
+console.log("Static game and pixel-art assets copied to dist/ for Cloudflare Pages.");
