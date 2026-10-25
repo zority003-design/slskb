@@ -143,6 +143,37 @@ body.game-paused .raindrop,body.game-paused .rain,body.game-paused .scene-art,bo
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:12px;padding-top:26px}.hero-aside{display:none}.hero-grid{grid-template-columns:1fr;gap:14px}.visual{min-height:285px;height:285px}.home-side{gap:16px}.case-options{grid-template-columns:1fr 1fr}.case-option{grid-template-columns:34px minmax(0,1fr);padding:10px;gap:4px 8px}.case-option .case-number{height:32px;font-size:10px}.case-option strong{font-size:12px}.case-option small{font-size:10px}.visual .operator{width:130px;height:170px;left:46%}}
 @media(max-width:560px){.hero{padding:22px 0 14px}.hero h1{font-size:clamp(35px,9vw,45px)}.hero p{font-size:13px;line-height:1.7}.visual{height:235px;min-height:235px}.visual .operator{width:112px;height:150px;left:45%;bottom:23px}.home-side{padding:14px}.home-side h2{font-size:20px}.case-options{grid-template-columns:1fr}.case-option{min-height:58px}.case-option strong{font-size:12px}.case-option small{font-size:10px}.feature-row{margin-top:14px}}
 </style>
+<style id="final-ui-polish">
+#gameScreen .choice{align-items:flex-start;gap:14px;padding:15px 16px;min-height:78px;border-radius:3px;background:linear-gradient(105deg,#1c2a25,#19241f);border:1px solid #526858}
+#gameScreen .choice-num{width:36px;height:36px;border-radius:3px;font-size:16px;font-weight:900;flex:none;margin-top:1px}
+#gameScreen .choice-copy{font-size:15px;line-height:1.45;min-width:0}
+#gameScreen .choice-copy strong{display:block;font-size:clamp(16px,1.45vw,19px);font-weight:900;line-height:1.35;color:#f5f7ed;letter-spacing:-.015em}
+#gameScreen .choice-copy small{font-size:12px;line-height:1.55;margin-top:6px;color:#c1cebf}
+#gameScreen .chevron{font-size:27px;line-height:1;color:#9bc8aa;align-self:center}
+#gameScreen .side-head{font-size:12px;letter-spacing:.07em}
+#gameScreen .stats-intro{font-size:11px;line-height:1.65;color:#b5c4b6;margin:10px 0 5px}
+#gameScreen .metric-line{font-size:12px;line-height:1.5}
+#gameScreen .clue-icon{width:34px;height:34px;font-size:18px;border-radius:3px}
+#gameScreen .clue-copy{font-size:12px;line-height:1.6}
+#gameScreen .clue-copy small{font-size:10px}
+#gameScreen .section-label{font-size:10px;letter-spacing:.1em}
+#gameScreen .decision-clock{border:1px solid #b18d4d;background:linear-gradient(100deg,#302b1e,#20271f);padding:15px;display:flex;gap:14px;align-items:center;margin-top:14px}
+#gameScreen .clock-glyph{font-size:30px;flex:none;color:#ffd37e}
+#gameScreen .clock-copy{font-size:12px;line-height:1.6;flex:1}
+#gameScreen .clock-copy strong{display:block;font-size:14px;font-weight:900;color:#ffdc93;letter-spacing:.04em;margin-bottom:4px}
+#gameScreen .clock-value{font-size:29px;font-weight:900;font-variant-numeric:tabular-nums;min-width:54px;text-align:right;color:#fff0c5}
+.pause-overlay{position:fixed;inset:0;z-index:10000;background:#07100eef;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(6px)}
+.pause-overlay.open{display:flex;animation:introReveal .18s steps(3,end)}
+.pause-panel{width:min(100%,460px);border:2px solid #52735e;background:#101d18;padding:clamp(24px,5vw,42px);box-shadow:10px 10px 0 #050a08;text-align:center}
+.pause-panel h2{font-size:clamp(27px,5vw,40px);line-height:1.15;margin:12px 0;color:#f2f5e9}
+.pause-panel p{font-size:14px;line-height:1.8;color:#b8c7bb;margin:0 0 22px}
+.pause-mark{font-size:48px;font-weight:900;color:#8ce2b0;margin:15px auto}
+.pause-summary{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #31493a;border-bottom:1px solid #31493a;padding:13px 0;margin-bottom:20px;font-size:9px;letter-spacing:.1em;color:#a6b7a9}
+.pause-summary strong{font-size:23px;color:#e8f2e6}
+.pause-panel button{width:100%;margin-top:9px;justify-content:center;min-height:48px}
+body.game-paused .raindrop,body.game-paused .rain,body.game-paused .scene-art,body.game-paused .visual{animation-play-state:paused!important}
+@media(max-width:560px){#gameScreen .choice{padding:13px 11px;gap:10px;min-height:76px}#gameScreen .choice-num{width:31px;height:31px;font-size:15px}#gameScreen .choice-copy strong{font-size:15px}#gameScreen .choice-copy small{font-size:12px}#gameScreen .chevron{font-size:23px}#gameScreen .clock-copy strong{font-size:12px}#gameScreen .clock-value{font-size:25px;min-width:42px}.pause-panel{padding:24px 18px}}
+</style>
 </head>
 <body><div class="app">
 <header class="topbar"><div class="brand" id="homeBrand" role="button" tabindex="0" aria-label="На главную"><div class="logo">⌁</div><div><div class="brand-title">ПОСЛЕДНЯЯ ЛИНИЯ</div><div class="brand-sub">ИНТЕРАКТИВНАЯ ДЕТЕКТИВНАЯ ДРАМА</div></div></div><div class="top-actions"><span class="tiny-status"><i class="led"></i><span id="topStatus">СИСТЕМА ГОТОВА</span></span><button class="icon-btn" id="pauseBtn" style="display:none" title="Приостановить игру">Ⅱ Пауза</button><button class="icon-btn" id="soundBtn" title="Звуковые эффекты включены или выключены">♪ Звук: выкл.</button></div></header>
