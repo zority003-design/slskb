@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="176" viewBox="0 0 32 44" shape-rendering="crispEdges"><rect width="32" height="44" fill="none"/><rect x="10" y="2" width="12" height="3" fill="#171f2d"/><rect x="7" y="5" width="18" height="4" fill="#171f2d"/><rect x="5" y="8" width="22" height="4" fill="#252b39"/><rect x="6" y="12" width="20" height="11" fill="#dba47d"/><rect x="4" y="11" width="3" height="8" fill="#171f2d"/><rect x="25" y="11" width="3" height="8" fill="#171f2d"/><rect x="9" y="15" width="3" height="2" fill="#342c30"/><rect x="20" y="15" width="3" height="2" fill="#342c30"/><rect x="13" y="19" width="6" height="2" fill="#a95f58"/><rect x="12" y="23" width="8" height="4" fill="#dba47d"/><rect x="5" y="26" width="22" height="3" fill="#74f0c0"/><rect x="2" y="29" width="28" height="12" fill="#263e58"/><rect x="0" y="32" width="32" height="12" fill="#203449"/><rect x="4" y="30" width="4" height="10" fill="#52748b"/><rect x="24" y="30" width="4" height="10" fill="#52748b"/><rect x="8" y="27" width="16" height="3" fill="#74f0c0"/><rect x="6" y="10" width="3" height="14" fill="#74f0c0"/><rect x="23" y="10" width="3" height="14" fill="#74f0c0"/><rect x="4" y="12" width="3" height="8" fill="#52748b"/><rect x="25" y="12" width="3" height="8" fill="#52748b"/><rect x="10" y="34" width="12" height="3" fill="#314e68"/><rect x="13" y="37" width="6" height="4" fill="#142535"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="220" viewBox="0 0 32 44" shape-rendering="crispEdges">
+<rect width="32" height="44" fill="none"/>
+<!-- headset band and short hair -->
+<rect x="8" y="2" width="16" height="3" fill="#111b29"/><rect x="6" y="5" width="20" height="5" fill="#172233"/>
+<rect x="5" y="8" width="4" height="9" fill="#172233"/><rect x="23" y="8" width="4" height="9" fill="#172233"/>
+<!-- face -->
+<rect x="8" y="9" width="16" height="13" fill="#dba47d"/><rect x="8" y="9" width="3" height="12" fill="#c58a6e"/><rect x="21" y="9" width="3" height="12" fill="#c58a6e"/>
+<rect x="10" y="13" width="3" height="2" fill="#202b38"/><rect x="19" y="13" width="3" height="2" fill="#202b38"/>
+<rect x="14" y="16" width="4" height="2" fill="#c58a6e"/><rect x="13" y="19" width="6" height="1" fill="#8f514b"/>
+<!-- ear cups and headset microphone -->
+<rect x="4" y="10" width="4" height="8" fill="#74f0c0"/><rect x="24" y="10" width="4" height="8" fill="#74f0c0"/>
+<rect x="6" y="7" width="2" height="8" fill="#a7bdc9"/><rect x="24" y="7" width="2" height="8" fill="#a7bdc9"/>
+<rect x="22" y="17" width="2" height="2" fill="#a7bdc9"/><rect x="20" y="19" width="3" height="2" fill="#a7bdc9"/><rect x="18" y="20" width="3" height="2" fill="#74f0c0"/>
+<!-- neck -->
+<rect x="12" y="22" width="8" height="5" fill="#dba47d"/><rect x="12" y="24" width="8" height="3" fill="#c58a6e"/>
+<!-- uniform shoulders and torso -->
+<rect x="4" y="27" width="24" height="4" fill="#304b64"/><rect x="2" y="30" width="28" height="14" fill="#1b2f45"/>
+<rect x="5" y="29" width="5" height="11" fill="#304b64"/><rect x="22" y="29" width="5" height="11" fill="#304b64"/>
+<rect x="10" y="27" width="12" height="3" fill="#d6e3e9"/><rect x="13" y="27" width="6" height="3" fill="#74f0c0"/>
+<!-- collar, radio mic, ID badge -->
+<rect x="10" y="30" width="4" height="3" fill="#91aabd"/><rect x="18" y="30" width="4" height="3" fill="#91aabd"/>
+<rect x="7" y="32" width="3" height="4" fill="#ffc66d"/><rect x="8" y="33" width="1" height="2" fill="#fff0c8"/>
+<rect x="21" y="32" width="5" height="6" fill="#d4e1e9"/><rect x="22" y="33" width="3" height="2" fill="#27445d"/><rect x="22" y="36" width="3" height="1" fill="#74f0c0"/>
+<!-- sleeves, hands on desk -->
+<rect x="0" y="32" width="5" height="8" fill="#243e57"/><rect x="27" y="32" width="5" height="8" fill="#243e57"/>
+<rect x="1" y="39" width="7" height="3" fill="#dba47d"/><rect x="24" y="39" width="7" height="3" fill="#dba47d"/>
+<rect x="9" y="40" width="14" height="4" fill="#132538"/>
+</svg>
