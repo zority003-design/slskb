@@ -4,6 +4,6 @@
   "private": true,
   "description": "Static narrative police-call operator game",
   "scripts": {
-    "build": "node -e \"const fs=require('fs'); if(!fs.existsSync('index.html')) { console.error('Build failed: index.html is missing from the project root.'); process.exit(1); } console.log('Static game is ready for Cloudflare Pages; no compilation is required.');\""
+    "build": "node build.js"
   }
 }
