@@ -9,7 +9,7 @@
 Для прямой загрузки:
 1. В Cloudflare откройте Workers & Pages → Create → Pages → Direct Upload.
 2. Загрузите папку, содержащую `index.html`, `_headers` и `_redirects` (или ZIP с этими файлами в корне архива).
-3. Если проект подключён к GitHub: Framework preset = None; Build command оставьте пустым; Build output directory = `/` (корень проекта). Не указывайте `npm run build`.
+3. Если проект подключён к GitHub: Framework preset = None; Build command оставьте пустым; Build output directory = `.` (корень проекта). Не указывайте `npm run build`.
 4. После публикации откройте адрес проекта и проверьте, что главная страница загружается.
 
 Если Cloudflare продолжит выдавать ошибку, сохраните точный текст ошибки или скриншот экрана deployment/build logs: ошибка может быть связана с настройкой существующего проекта, а не с файлами игры.
