@@ -405,19 +405,114 @@ body{background:radial-gradient(ellipse at 80% -20%,#243c31 0,transparent 34%),l
 .protocol-step small{display:block;color:#91abc7;font-size:10px;line-height:1.55;margin-top:3px}
 @media(max-width:800px){.shift-protocol{gap:7px}.protocol-step{padding:8px 0}}
 </style>
+
+<style id="last-line-home-redesign">
+/* Main menu: immersive dispatch-console redesign */
+#homeScreen.active{display:flex!important;flex-direction:column;gap:0;position:relative;isolation:isolate}
+#homeScreen>.hero{order:1;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:28px;padding:clamp(30px,5vw,64px) 0 24px}
+#homeScreen>.hero>div:first-child{max-width:790px}
+#homeScreen .hero .eyebrow{display:flex;align-items:center;gap:10px;color:#9bb9c0;letter-spacing:.19em;font-size:10px}
+#homeScreen .hero .eyebrow:before{content:"";width:24px;height:1px;background:#8de0bd;box-shadow:0 0 12px #8de0bd88}
+#homeScreen .hero h1{font-size:clamp(54px,8.5vw,108px);line-height:.91;letter-spacing:-.065em;margin:20px 0 22px;text-wrap:balance}
+#homeScreen .hero h1 em{font-style:normal;color:#a4e7c9;text-shadow:0 0 34px #78d9ae24}
+#homeScreen .hero p{max-width:560px;color:#a9bbc6;font-size:clamp(14px,1.2vw,16px);line-height:1.85}
+#homeScreen .hero-aside{padding:13px 0 5px 22px;border-left:1px solid #2a4149;min-width:175px;text-align:left;color:#8099a5}
+#homeScreen .hero-aside strong{font-size:12px;color:#c9e8dc;letter-spacing:.1em;margin:8px 0}
+#homeScreen .country-badge{border-radius:2px;border-color:#31564b;color:#a9ddc6;background:#10231f}
+#homeScreen .home-stats{order:4;margin-top:36px;padding:clamp(18px,3vw,32px);border:1px solid #263e49;background:linear-gradient(130deg,#101d28ed,#0a131def);position:relative;overflow:hidden}
+#homeScreen .home-stats:before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:#7fdbb1;opacity:.7}
+#homeScreen .stats-intro h2{font-size:clamp(23px,3vw,38px);line-height:1.18;letter-spacing:-.035em}
+#homeScreen .stats-intro p{max-width:650px;color:#9fb1bc;line-height:1.8}
+#homeScreen .stats-card{border-radius:2px;background:#0d1a25;border-color:#2b414e}
+#homeScreen .stats-number{font-variant-numeric:tabular-nums}
+#homeScreen .hero-grid{order:2;grid-template-columns:minmax(0,1.28fr) minmax(320px,.82fr);gap:16px;align-items:stretch}
+#homeScreen .visual{height:clamp(340px,36vw,470px);border:1px solid #2c494b;background:radial-gradient(ellipse at 48% 30%,#25413c 0,#142822 38%,#09141b 78%);box-shadow:inset 0 0 80px #0005,0 20px 55px #0002;overflow:hidden}
+#homeScreen .visual:after{content:"";position:absolute;inset:0;z-index:8;pointer-events:none;background:linear-gradient(180deg,#07101826,transparent 35%,#06101955),repeating-linear-gradient(0deg,transparent 0 3px,#c4e5d006 4px)}
+#homeScreen .visual .city-window{width:46%;height:73%;right:8%;top:3%;border-color:#344940;background:linear-gradient(180deg,#101d2b,#1b3936);box-shadow:inset 0 0 70px #7ec4b018,0 0 60px #6cbf9b0b}
+#homeScreen .visual .rain{opacity:.85}
+#homeScreen .visual .operator{filter:drop-shadow(0 0 18px #77c6a514)}
+#homeScreen .home-transmission{position:absolute;z-index:10;top:15px;left:15px;right:15px;display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid #5a7d7760;background:#08151bd9;color:#a4c7bc;font:10px ui-monospace,SFMono-Regular,monospace;letter-spacing:.1em}
+#homeScreen .transmission-led,#homeScreen .start-btn-led{display:inline-block;width:7px;height:7px;flex:none;border-radius:50%;background:#8ce5b7;box-shadow:0 0 12px #8ce5b7;animation:homeLedPulse 1.8s ease-in-out infinite}
+#homeScreen .home-transmission strong{margin-left:auto;color:#e0f6eb;font-size:9px;font-weight:500}
+#homeScreen .transmission-wave{height:17px;display:flex;align-items:center;gap:2px;margin-left:5px}
+#homeScreen .transmission-wave i{display:block;width:2px;height:5px;background:#7fdbb1;opacity:.8;animation:homeWave .85s ease-in-out infinite alternate}
+#homeScreen .transmission-wave i:nth-child(2n){animation-delay:.2s}
+#homeScreen .transmission-wave i:nth-child(3n){animation-delay:.4s}
+#homeScreen .transmission-wave i:nth-child(4n){animation-delay:.1s}
+#homeScreen .home-call-alert{position:absolute;z-index:9;left:18px;bottom:78px;max-width:min(390px,78%);display:flex;align-items:center;gap:13px;padding:15px 17px;background:#0a171eeb;border:1px solid #4b6a61;box-shadow:0 12px 35px #0005;animation:homeAlertIn .8s .2s both}
+#homeScreen .call-alert-icon{display:grid;place-items:center;width:37px;height:37px;flex:none;background:#183b30;color:#a3f0c9;font-size:22px;border:1px solid #3d6e59}
+#homeScreen .home-call-alert small{display:block;color:#8ba99f;font-size:8px;letter-spacing:.13em;margin-bottom:7px}
+#homeScreen .home-call-alert strong{display:block;color:#edf7f1;font-size:clamp(14px,1.5vw,19px);line-height:1.35;font-weight:600}
+#homeScreen .call-alert-pulse{position:absolute;right:10px;top:10px;width:5px;height:5px;border-radius:50%;background:#e7bc77;box-shadow:0 0 12px #e7bc77;animation:homeLedPulse 1.2s infinite}
+#homeScreen .home-side{padding:clamp(20px,2.5vw,31px);border:1px solid #30474d;background:linear-gradient(155deg,#12232b,#0b151e 75%);min-height:100%;gap:22px;position:relative;overflow:hidden}
+#homeScreen .home-side:before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#82d8b2,#82d8b200 75%)}
+#homeScreen .chapter-kicker{color:#9ac8b5;letter-spacing:.15em;font-size:9px}
+#homeScreen .home-side h2{font-size:clamp(25px,2.6vw,35px);line-height:1.2;letter-spacing:-.035em;margin:12px 0}
+#homeScreen #homeDesc{color:#a5b6bf;font-size:13px;line-height:1.8}
+#homeScreen .country-picker{padding:14px;border:1px solid #293f49;background:#0a151c}
+#homeScreen .country-picker label{color:#a6c3b8;font-size:9px;letter-spacing:.11em}
+#homeScreen .country-picker select{width:100%;margin-top:9px;border-radius:2px;background:#101f28;border-color:#34554d}
+#homeScreen .country-picker p{color:#849ba5;line-height:1.65}
+#homeScreen .shift-protocol{border-top:1px solid #263a43;padding-top:16px}
+#homeScreen .section-label{color:#85b7a2;letter-spacing:.13em;font-size:9px;margin-bottom:13px}
+#homeScreen .protocol-step{border-color:#263a43}
+#homeScreen .protocol-step>span{color:#8cdbb4}
+#homeScreen .protocol-step strong{color:#e2eee9}
+#homeScreen .protocol-step small{color:#8da3ad;line-height:1.6}
+#homeScreen .button-row{display:grid;grid-template-columns:1fr;gap:9px}
+#homeScreen #startBtn{width:100%;min-height:56px;justify-content:center;display:flex;align-items:center;gap:10px;background:#a4e7c5;color:#071a15;border:1px solid #bff5d8;box-shadow:0 0 28px #76d5a51a;font-size:13px;letter-spacing:.035em}
+#homeScreen #startBtn:hover{background:#c0f5d8;box-shadow:0 0 32px #76d5a52c}
+#homeScreen #continueBtn{width:100%;min-height:50px}
+#homeScreen .start-btn-led{background:#183d2e;box-shadow:0 0 8px #4b956f}
+#homeScreen .home-cta-note{font-size:9px!important;line-height:1.8;color:#718a94;letter-spacing:.02em}
+#homeScreen .home-cta-note span{display:block;color:#6fa98e;font:9px ui-monospace,monospace;letter-spacing:.16em;margin-bottom:3px}
+#homeScreen .feature-row{order:3;gap:12px;margin-top:16px}
+#homeScreen .feature{padding:18px;border:1px solid #263f47;background:linear-gradient(145deg,#101f27,#0b151d);gap:13px}
+#homeScreen .feature-icon{color:#9ae3bd}
+#homeScreen .feature strong{color:#e0eee8;font-size:12px}
+#homeScreen .feature span{color:#91a5ae;font-size:11px;line-height:1.7}
+#homeScreen .home-bottom{order:5;margin-top:22px;padding-top:14px;border-top:1px solid #20343d;color:#78919a;letter-spacing:.1em}
+@keyframes homeLedPulse{0%,100%{opacity:1}50%{opacity:.42}}
+@keyframes homeWave{from{height:3px;opacity:.4}to{height:16px;opacity:1}}
+@keyframes homeAlertIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:800px){
+ #homeScreen>.hero{grid-template-columns:1fr;gap:16px;padding:28px 0 20px}
+ #homeScreen .hero h1{font-size:clamp(49px,13vw,75px);margin:16px 0}
+ #homeScreen .hero-aside{border-left:0;border-top:1px solid #263f47;padding:12px 0 0;min-width:0;text-align:left;display:grid;grid-template-columns:1fr auto;gap:3px 12px}
+ #homeScreen .hero-aside strong{margin:3px 0}
+ #homeScreen .hero-aside .country-badge{grid-column:1/-1;width:max-content}
+ #homeScreen .hero-grid{grid-template-columns:1fr;gap:12px}
+ #homeScreen .visual{height:clamp(300px,82vw,390px)}
+ #homeScreen .home-side{min-height:0;padding:20px}
+ #homeScreen .home-call-alert{left:12px;bottom:65px;padding:12px;max-width:88%;gap:10px}
+ #homeScreen .call-alert-icon{width:32px;height:32px}
+ #homeScreen .home-call-alert small{font-size:7px}
+ #homeScreen .home-call-alert strong{font-size:15px}
+ #homeScreen .home-transmission{left:10px;right:10px;top:10px;padding:8px;font-size:8px;gap:6px}
+ #homeScreen .home-transmission strong{font-size:7px}
+ #homeScreen .transmission-wave{display:none}
+ #homeScreen .feature-row{grid-template-columns:1fr;gap:8px}
+ #homeScreen .feature{padding:14px}
+ #homeScreen .home-stats{margin-top:24px;padding:17px}
+ #homeScreen .home-bottom{gap:8px;line-height:1.8;font-size:8px;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+ #homeScreen .transmission-led,#homeScreen .start-btn-led,#homeScreen .transmission-wave i,#homeScreen .call-alert-pulse,#homeScreen .home-call-alert{animation:none!important}
+}
+</style>
 </head>
 <body><div class="app">
 <header class="topbar"><div class="brand" id="homeBrand" role="button" tabindex="0" aria-label="На главную"><div class="logo">⌁</div><div><div class="brand-title">ПОСЛЕДНЯЯ ЛИНИЯ</div><div class="brand-sub">ИНТЕРАКТИВНАЯ ДЕТЕКТИВНАЯ ДРАМА</div></div></div><div class="top-actions"><span class="tiny-status"><i class="led"></i><span id="topStatus">СИСТЕМА ГОТОВА</span></span><button class="icon-btn" id="pauseBtn" style="display:none" title="Поставить игру на паузу"><span class="pause-icon" aria-hidden="true">⏸</span><span>Пауза</span></button><button class="icon-btn" id="soundBtn" title="Звуковые эффекты включены или выключены">♪ Звук: выкл.</button></div></header>
 <section id="homeScreen" class="screen active">
-<div class="hero"><div><div class="eyebrow">ЦЕНТР РЕАГИРОВАНИЯ · КАРЬЕРНЫЙ РЕЖИМ</div><h1>Выдержи<br>эту смену.</h1><p>Ты — новый оператор экстренной линии. Каждый рабочий день приносит случайное дело, а каждое решение может отозваться позже. Продержись как можно дольше.</p></div><div class="hero-aside">ЦЕНТР РЕАГИРОВАНИЯ<strong id="jurisdictionName">РОССИЯ · 112</strong>ОПЕРАТОРСКАЯ / 014<br><span id="saveLabel">НЕТ СОХРАНЕНИЯ</span><div class="country-badge"><span>●</span><span id="jurisdictionShort">ПРОФИЛЬ: РОССИЯ</span></div></div></div>
+<div class="hero"><div><div class="eyebrow">ЦЕНТР РЕАГИРОВАНИЯ · КАРЬЕРНЫЙ РЕЖИМ</div><h1>Линия<br>не должна<br><em>молчать.</em></h1><p>Ночная смена. Чужие голоса. Неполная картина происходящего. Ты не знаешь, какой звонок окажется решающим — но именно тебе предстоит принять следующий вызов.</p></div><div class="hero-aside">ЦЕНТР РЕАГИРОВАНИЯ<strong id="jurisdictionName">РОССИЯ · 112</strong>ОПЕРАТОРСКАЯ / 014<br><span id="saveLabel">НЕТ СОХРАНЕНИЯ</span><div class="country-badge"><span>●</span><span id="jurisdictionShort">ПРОФИЛЬ: РОССИЯ</span></div></div></div>
 <div class="home-stats" aria-label="Факты о насилии и преступности">
 <div class="stats-intro"><span class="eyebrow">ЗА КАЖДОЙ ЦИФРОЙ — ЧЕЛОВЕК</span><h2>Пока линия молчит,<br><em>мир не останавливается.</em></h2><p>Каждый звонок — чья-то реальность. Эти цифры не предсказывают события и не заменяют расследование: они показывают масштаб проблем, с которыми сталкиваются службы помощи.</p></div>
 <div class="stats-card"><span class="stats-index">01 / СРЕДНЕЕ ЗА СУТКИ</span><strong class="stats-number">≈ 1 147</strong><b>умышленных убийств в среднем за сутки</b><small>419 927 за 2024 год, разделённые на 366 дней. Это среднее значение, а не равномерный или прогнозируемый поток событий.</small><a href="https://ourworldindata.org/grapher/homicides-unodc" target="_blank" rel="noopener noreferrer">UNODC через Our World in Data · CC BY 4.0 ↗</a></div>
 <div class="stats-card stats-live"><span class="stats-index">02 / УСЛОВНЫЙ СЧЁТЧИК</span><strong class="stats-number" id="homicideTicker">0</strong><b>расчётный темп убийств с открытия страницы</b><small>Модель по годовому показателю 419 927 умышленных убийств за 2024 год. Это усреднение, а не данные в реальном времени.</small><a href="https://ourworldindata.org/grapher/homicides-unodc" target="_blank" rel="noopener noreferrer">UNODC через OWID ↗</a></div><div class="stats-card stats-live"><span class="stats-index">03 / УСЛОВНЫЙ СЧЁТЧИК</span><strong class="stats-number" id="violenceTicker">0</strong><b>расчётная оценка смертей, связанных с насилием</b><small>ВОЗ оценивает их число примерно в 1,25 млн в год. Категория шире умышленных убийств; это не счётчик реальных событий.</small><a href="https://www.who.int/news-room/fact-sheets/detail/injuries-and-violence" target="_blank" rel="noopener noreferrer">Данные ВОЗ ↗</a></div>
 <div class="stats-foot"><span class="stats-live-dot"></span> РАСЧЁТНАЯ ОЦЕНКА, НЕ ДАННЫЕ В РЕАЛЬНОМ ВРЕМЕНИ · УБИЙСТВА: UNODC / OUR WORLD IN DATA (CC BY 4.0) · НАСИЛИЕ: ВОЗ</div>
 </div>
-<div class="hero-grid"><div class="visual"><div class="city-window"><div class="window-skyline"></div><div class="rain" aria-hidden="true"></div></div><div class="cityline"></div><div class="lamp"></div><div class="operator"><div class="op-body"></div><div class="op-neck"></div><div class="op-head"><div class="op-eye"></div><div class="op-eye r"></div><div class="op-mouth"></div></div><div class="op-hair"></div><div class="headset"></div><div class="op-label">ОПЕРАТОР 014</div></div><div class="pixel-keyboard"></div><div class="pixel-radio"><span>RADIO</span><b>▰ ▰ ▰</b></div><div class="pixel-mug"></div><div class="pixel-chair"></div><div class="desk"></div></div>
-<div class="home-side"><div><div class="chapter-kicker">ЛИЧНОЕ ДЕЛО · ОПЕРАТОР 014</div><h2 id="homeChapter">Первая смена начинается</h2><p id="homeDesc">Сначала — первый вызов. Выбранная страна меняет справочный номер и условную ротацию игровых сюжетов, но не изображает реальные показатели преступности.</p></div><div class="country-picker"><label for="countrySelect">СТРАНА / ПРОФИЛЬ ОПЕРАТОРСКОЙ</label><select id="countrySelect" aria-describedby="countryNote"><option value="RU">Россия · 112</option><option value="US">США · 911</option><option value="UK">Великобритания · 999 / 112</option><option value="DE">Германия · 112 / 110</option><option value="JP">Япония · 110 / 119</option></select><p id="countryNote">Профиль задаёт оформление диспетчерской и справочный номер. Сюжеты вымышлены и не описывают реальные инструкции экстренных служб.</p></div><div class="shift-protocol"><div class="section-label">ПЕРВОЕ ДЕЖУРСТВО · ПРОТОКОЛ 001</div><div class="protocol-step"><span>01</span><div><strong>Прими вызов</strong><small>Уточни адрес и непосредственную угрозу.</small></div></div><div class="protocol-step"><span>02</span><div><strong>Проверь факты</strong><small>Отделяй подтверждённые сведения от догадок.</small></div></div><div class="protocol-step"><span>03</span><div><strong>Не закрывай линию раньше времени</strong><small>Убедись, что люди в безопасности и следующий шаг организован.</small></div></div></div><div><div class="button-row"><button class="primary" id="startBtn">Играть&nbsp; ↗</button><button class="secondary" id="continueBtn" style="display:none">Продолжить</button></div><p style="font-size:10px;margin-top:13px">Бесконечная смена · случайные дела · автосохранение</p></div></div></div>
+<div class="hero-grid"><div class="visual"><div class="home-transmission"><span class="transmission-led"></span><span>ЛИНИЯ 014</span><strong>ОЖИДАНИЕ ВЫЗОВА</strong><span class="transmission-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div><div class="home-call-alert"><span class="call-alert-icon">↘</span><div><small>ЦЕНТР СВЯЗИ · СЕВЕРНЫЙ ОКРУГ</small><strong>Следующий звонок<br>может изменить всё.</strong></div><span class="call-alert-pulse"></span></div><div class="visual"><div class="city-window"><div class="window-skyline"></div><div class="rain" aria-hidden="true"></div></div><div class="cityline"></div><div class="lamp"></div><div class="operator"><div class="op-body"></div><div class="op-neck"></div><div class="op-head"><div class="op-eye"></div><div class="op-eye r"></div><div class="op-mouth"></div></div><div class="op-hair"></div><div class="headset"></div><div class="op-label">ОПЕРАТОР 014</div></div><div class="pixel-keyboard"></div><div class="pixel-radio"><span>RADIO</span><b>▰ ▰ ▰</b></div><div class="pixel-mug"></div><div class="pixel-chair"></div><div class="desk"></div></div>
+<div class="home-side"><div><div class="chapter-kicker">ЛИЧНОЕ ДЕЛО · ОПЕРАТОР 014</div><h2 id="homeChapter">Первая смена начинается</h2><p id="homeDesc">Сначала — первый вызов. Выбранная страна меняет справочный номер и условную ротацию игровых сюжетов, но не изображает реальные показатели преступности.</p></div><div class="country-picker"><label for="countrySelect">СТРАНА / ПРОФИЛЬ ОПЕРАТОРСКОЙ</label><select id="countrySelect" aria-describedby="countryNote"><option value="RU">Россия · 112</option><option value="US">США · 911</option><option value="UK">Великобритания · 999 / 112</option><option value="DE">Германия · 112 / 110</option><option value="JP">Япония · 110 / 119</option></select><p id="countryNote">Профиль задаёт оформление диспетчерской и справочный номер. Сюжеты вымышлены и не описывают реальные инструкции экстренных служб.</p></div><div class="shift-protocol"><div class="section-label">ПЕРВОЕ ДЕЖУРСТВО · ПРОТОКОЛ 001</div><div class="protocol-step"><span>01</span><div><strong>Прими вызов</strong><small>Уточни адрес и непосредственную угрозу.</small></div></div><div class="protocol-step"><span>02</span><div><strong>Проверь факты</strong><small>Отделяй подтверждённые сведения от догадок.</small></div></div><div class="protocol-step"><span>03</span><div><strong>Не закрывай линию раньше времени</strong><small>Убедись, что люди в безопасности и следующий шаг организован.</small></div></div></div><div><div class="button-row"><button class="primary" id="startBtn"><span class="start-btn-led"></span> Принять вызов&nbsp; ↗</button><button class="secondary" id="continueBtn" style="display:none">Продолжить</button></div><p class="home-cta-note"><span>ENTER THE SHIFT</span> Бесконечная смена · случайные дела · автосохранение</p></div></div></div>
 <div class="feature-row"><div class="feature"><div class="feature-icon">◉</div><div><strong>Слушай внимательно</strong><span>Диалоги и противоречивые показания меняют ход дела.</span></div></div><div class="feature"><div class="feature-icon">⌕</div><div><strong>Ищи улики</strong><span>Каждый факт сохраняется в журнале расследования.</span></div></div><div class="feature"><div class="feature-icon">↗</div><div><strong>Отвечай за выбор</strong><span>Решения влияют на доверие, точность и репутацию.</span></div></div></div>
 <div class="home-bottom"><span>ВЫМЫШЛЕННЫЙ ГОРОД · ВЫМЫШЛЕННЫЕ ПЕРСОНАЖИ</span><span>КАРЬЕРНЫЙ РЕЖИМ · СМЕНА БЕЗ КОНЦА</span></div>
 </section>
